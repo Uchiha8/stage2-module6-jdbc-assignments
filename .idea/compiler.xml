@@ -9,8 +9,5 @@
         <module name="mjc-school" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="mjc-school" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
