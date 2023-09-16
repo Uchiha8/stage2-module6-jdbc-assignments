@@ -22,11 +22,12 @@ public class CustomDataSource implements DataSource {
     private final String name;
     private final String password;
 
-    private CustomDataSource(String driver, String url, String password, String name) {
+    private CustomDataSource(String driver, String url, String password,
+                             String name) {
         this.driver = driver;
         this.url = url;
-        this.password = password;
         this.name = name;
+        this.password = password;
     }
 
     public static CustomDataSource getInstance() {
@@ -66,13 +67,13 @@ public class CustomDataSource implements DataSource {
     }
 
     @Override
-    public void setLoginTimeout(int seconds) throws SQLException {
-
+    public int getLoginTimeout() throws SQLException {
+        return 0;
     }
 
     @Override
-    public int getLoginTimeout() throws SQLException {
-        return 0;
+    public void setLoginTimeout(int seconds) throws SQLException {
+
     }
 
     @Override
